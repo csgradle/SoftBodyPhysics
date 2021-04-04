@@ -2,10 +2,10 @@ class SoftBody {
   MassPoint[] points;
   Spring[] springs;
   SoftBody() {    
-    int w = 3, h = 5;
+    int w = 20, h = 30;
 
     points = new MassPoint[w*h];
-    float mass = 15;
+    float mass = 25;
     for(int y = 0; y < w; y++) {
       for(int x = 0; x < h; x++) {
         points[x+y*h] = new MassPoint(new Vector2(x*len+250, y*len+30), mass);
@@ -75,7 +75,7 @@ class SoftBody {
       springs[i].draw();
     }
     for(int i = 0; i < points.length; i++) {
-      //points[i].draw();
+      points[i].draw();
       
     }
   }

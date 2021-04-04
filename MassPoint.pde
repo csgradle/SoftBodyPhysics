@@ -35,10 +35,10 @@ class MassPoint {
     for(Shape shape : shapes) {
       Vector2 intersection = shape.inShape(p);
       if(intersection.x != 0 && intersection.y != 0) {
-        Vector2 coord1 = p.add(intersection).add(intersection.normalized().multiply(5));
-        Vector2 coord2 = p.add(intersection).add(intersection.normalized().multiply(-5));
-        stroke(0,255,0); strokeWeight(2);
-        line(coord1.x, coord1.y, coord2.x, coord2.y);
+        //Vector2 coord1 = p.add(intersection).add(intersection.normalized().multiply(5));
+        //Vector2 coord2 = p.add(intersection).add(intersection.normalized().multiply(-5));
+        //stroke(0,255,0); strokeWeight(2);
+        //line(coord1.x, coord1.y, coord2.x, coord2.y);
         
         np = p.add(intersection);
         nv = nv.reflect(intersection);
@@ -51,6 +51,6 @@ class MassPoint {
     
 
     fill(255,0,0);noStroke();
-    ellipse(p.x, p.y, 8, 8);
+    ellipse(p.x, p.y, 5, 5);
   }
 }
